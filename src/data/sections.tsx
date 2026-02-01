@@ -1,6 +1,8 @@
 import { type ReactElement } from "react";
-// import { Section } from "@/components/templates";
-// import { FullWidthLayout, SplitLayout, GridLayout, SidebarLayout, Sidebar, Main } from "@/components/layouts";
+import { Section } from "@/components/templates";
+import { FullWidthLayout } from "@/components/layouts";
+import { InteractiveParagraph } from "@/components/molecules/InteractiveParagraph";
+import { EditableText } from "@/components/editing/EditableText";
 
 // Initialize variables from this file's variable definitions
 import { useVariableStore } from "@/stores";
@@ -80,15 +82,35 @@ useVariableStore.getState().initialize(getDefaultValues());
  */
 
 export const sections: ReactElement[] = [
-    // Start adding your sections here!
+    <FullWidthLayout key="math-in-nature" maxWidth="xl">
+        <Section id="intro">
+            <EditableText as="h1" className="text-3xl font-bold mb-6 text-foreground">
+                Mathematics in Nature
+            </EditableText>
 
-    // Example:
-    /*
-    <FullWidthLayout key="welcome" maxWidth="xl">
-        <Section id="welcome-message">
-            <h1 className="text-4xl font-bold">Welcome to MathVibe</h1>
-            <p className="mt-4 text-xl text-muted-foreground">Start building your interactive lesson.</p>
+            <InteractiveParagraph className="mb-4 text-muted-foreground">
+                <EditableText as="span">
+                    Mathematics is the language of the universe. From the spirals of galaxies to the patterns in a sunflower, numbers and shapes reveal the hidden order in nature. Let's explore these fascinating connections together!
+                </EditableText>
+            </InteractiveParagraph>
+
+            <InteractiveParagraph className="mb-4 text-muted-foreground">
+                <EditableText as="span">
+                    Have you ever wondered why honeybees build hexagonal cells? A hexagon has 6 sides, making it the most efficient shape for storing honey — they use the least amount of wax while maximizing space. Nature discovered this optimization millions of years before humans!
+                </EditableText>
+            </InteractiveParagraph>
+
+            <InteractiveParagraph className="mb-4 text-muted-foreground">
+                <EditableText as="span">
+                    The Fibonacci sequence appears everywhere in nature: the arrangement of leaves on a stem, the spiral of a nautilus shell, and even the branching of trees. If you start with 0 and 1, each number is the sum of the two before it: 1, 1, 2, 3, 5, 8, 13, 21...
+                </EditableText>
+            </InteractiveParagraph>
+
+            <InteractiveParagraph className="text-muted-foreground">
+                <EditableText as="span">
+                    Pi (π) is perhaps the most famous number in mathematics. This non-repeating decimal connects a circle's circumference to its diameter. If a circle has a diameter of 1 unit, its circumference is π ≈ 3.14159 units. Ancient civilizations approximated pi thousands of years ago, and mathematicians continue to calculate more digits today — currently over 100 trillion!
+                </EditableText>
+            </InteractiveParagraph>
         </Section>
     </FullWidthLayout>
-    */
 ];
