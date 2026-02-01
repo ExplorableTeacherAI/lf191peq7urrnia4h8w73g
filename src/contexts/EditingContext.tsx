@@ -72,7 +72,7 @@ export const EditingProvider = ({ children }: EditingProviderProps) => {
 
     // Generate unique ID for edits
     const generateId = useCallback(() => {
-        return `edit-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+        return `edit-${Date.now()}-${Math.rom().toString(36).substr(2, 9)}`;
     }, []);
 
     const enableEditing = useCallback(() => {
