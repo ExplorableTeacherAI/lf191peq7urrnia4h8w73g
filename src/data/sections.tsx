@@ -98,7 +98,7 @@ export const sections: ReactElement[] = [
             </InteractiveParagraph>
 
             <InteractiveParagraph className="mb-4 text-muted-foreground">
-                <EditableText as="span">Have you ever wondered why honeybees build hexagonal cells? A hexagon has</EditableText>{" "}
+                <EditableText as="span">Have you ever wondered why honeybees build hexagonal cells? </EditableText>{" "}
                 <InlineStepper
                     initialValue={6}
                     min={3}
