@@ -98,7 +98,7 @@ export const sections: ReactElement[] = [
             </InteractiveParagraph>
 
             <InteractiveParagraph className="mb-4 text-muted-foreground">
-                Have you ever wondered why honeybees build hexagonal cells? A hexagon has{" "}
+                <EditableText as="span">Have you ever wondered why honeybees build hexagonal cells? A hexagon has</EditableText>{" "}
                 <InlineStepper
                     initialValue={6}
                     min={3}
@@ -106,18 +106,18 @@ export const sections: ReactElement[] = [
                     color="#D81B60"
                     bgColor="rgba(216, 27, 96, 0.9)"
                 />{" "}
-                sides, making it the most efficient shape for storing honey — they use the{" "}
+                <EditableText as="span">sides, making it the most efficient shape for storing honey — they use the</EditableText>{" "}
                 <InlineDropdown
                     correctAnswer="least"
                     options={["most", "least", "average"]}
                     color="#8B5CF6"
                     bgColor="rgba(139, 92, 246, 0.35)"
                 />{" "}
-                amount of wax while maximizing space. Nature discovered this optimization millions of years before humans!
+                <EditableText as="span">amount of wax while maximizing space. Nature discovered this optimization millions of years before humans!</EditableText>
             </InteractiveParagraph>
 
             <InteractiveParagraph className="mb-4 text-muted-foreground">
-                The Fibonacci sequence appears everywhere in nature: the arrangement of leaves on a stem, the spiral of a nautilus shell, and even the branching of trees. If you start with{" "}
+                <EditableText as="span">The Fibonacci sequence appears everywhere in nature: the arrangement of leaves on a stem, the spiral of a nautilus shell, and even the branching of trees. If you start with</EditableText>{" "}
                 <InlineStepper
                     initialValue={0}
                     min={0}
@@ -125,7 +125,7 @@ export const sections: ReactElement[] = [
                     color="#059669"
                     bgColor="rgba(5, 150, 105, 0.9)"
                 />{" "}
-                and{" "}
+                <EditableText as="span">and</EditableText>{" "}
                 <InlineStepper
                     initialValue={1}
                     min={0}
@@ -133,11 +133,11 @@ export const sections: ReactElement[] = [
                     color="#059669"
                     bgColor="rgba(5, 150, 105, 0.9)"
                 />{" "}
-                , each number is the sum of the two before it: 1, 1, 2, 3, 5, 8, 13, 21...
+                <EditableText as="span">, each number is the sum of the two before it: 1, 1, 2, 3, 5, 8, 13, 21...</EditableText>
             </InteractiveParagraph>
 
             <InteractiveParagraph className="text-muted-foreground">
-                Pi (π) is perhaps the most famous number in mathematics. This non-repeating decimal connects a circle's circumference to its diameter. If a circle has a diameter of{" "}
+                <EditableText as="span">Pi (π) is perhaps the most famous number in mathematics. This non-repeating decimal connects a circle's circumference to its diameter. If a circle has a diameter of</EditableText>{" "}
                 <InlineStepper
                     initialValue={1}
                     min={1}
@@ -145,14 +145,14 @@ export const sections: ReactElement[] = [
                     color="#0EA5E9"
                     bgColor="rgba(14, 165, 233, 0.9)"
                 />{" "}
-                unit, its circumference is{" "}
+                <EditableText as="span">unit, its circumference is</EditableText>{" "}
                 <InlineTextInput
                     correctAnswer="π"
                     placeholder="?"
                     color="#F59E0B"
                     bgColor="rgba(245, 158, 11, 0.35)"
                 />{" "}
-                ≈ 3.14159 units. Ancient civilizations approximated pi thousands of years ago, and mathematicians continue to calculate more digits today — currently over 100 trillion!
+                <EditableText as="span">≈ 3.14159 units. Ancient civilizations approximated pi thousands of years ago, and mathematicians continue to calculate more digits today — currently over 100 trillion!</EditableText>
             </InteractiveParagraph>
         </Section>
     </FullWidthLayout>
