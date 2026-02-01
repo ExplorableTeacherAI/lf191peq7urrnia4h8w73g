@@ -133,7 +133,7 @@ export const sections: ReactElement[] = [
                     color="#059669"
                     bgColor="rgba(5, 150, 105, 0.9)"
                 />{" "}
-                <EditableText as="span">, each number is the sum of the two before it: 1, 1, 2, 3, 5, 8, 13, 21...</EditableText>
+                <EditableText as="span">, each number is the sum of the two before it: 1, 1, 2, 3, 5, 8.</EditableText>
             </InteractiveParagraph>
 
             <InteractiveParagraph className="text-muted-foreground">
