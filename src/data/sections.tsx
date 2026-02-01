@@ -3,6 +3,9 @@ import { Section } from "@/components/templates";
 import { FullWidthLayout } from "@/components/layouts";
 import { InteractiveParagraph } from "@/components/molecules/InteractiveParagraph";
 import { EditableText } from "@/components/editing/EditableText";
+import { InlineStepper } from "@/components/atoms/InlineStepper";
+import { InlineTextInput } from "@/components/atoms/InlineTextInput";
+import { InlineDropdown } from "@/components/atoms/InlineDropdown";
 
 // Initialize variables from this file's variable definitions
 import { useVariableStore } from "@/stores";
@@ -95,21 +98,61 @@ export const sections: ReactElement[] = [
             </InteractiveParagraph>
 
             <InteractiveParagraph className="mb-4 text-muted-foreground">
-                <EditableText as="span">
-                    Have you ever wondered why honeybees build hexagonal cells? A hexagon has 6 sides, making it the most efficient shape for storing honey — they use the least amount of wax while maximizing space. Nature discovered this optimization millions of years before humans!
-                </EditableText>
+                Have you ever wondered why honeybees build hexagonal cells? A hexagon has{" "}
+                <InlineStepper
+                    initialValue={6}
+                    min={3}
+                    max={12}
+                    color="#D81B60"
+                    bgColor="rgba(216, 27, 96, 0.9)"
+                />{" "}
+                sides, making it the most efficient shape for storing honey — they use the{" "}
+                <InlineDropdown
+                    correctAnswer="least"
+                    options={["most", "least", "average"]}
+                    color="#8B5CF6"
+                    bgColor="rgba(139, 92, 246, 0.35)"
+                />{" "}
+                amount of wax while maximizing space. Nature discovered this optimization millions of years before humans!
             </InteractiveParagraph>
 
             <InteractiveParagraph className="mb-4 text-muted-foreground">
-                <EditableText as="span">
-                    The Fibonacci sequence appears everywhere in nature: the arrangement of leaves on a stem, the spiral of a nautilus shell, and even the branching of trees. If you start with 0 and 1, each number is the sum of the two before it: 1, 1, 2, 3, 5, 8, 13, 21...
-                </EditableText>
+                The Fibonacci sequence appears everywhere in nature: the arrangement of leaves on a stem, the spiral of a nautilus shell, and even the branching of trees. If you start with{" "}
+                <InlineStepper
+                    initialValue={0}
+                    min={0}
+                    max={5}
+                    color="#059669"
+                    bgColor="rgba(5, 150, 105, 0.9)"
+                />{" "}
+                and{" "}
+                <InlineStepper
+                    initialValue={1}
+                    min={0}
+                    max={5}
+                    color="#059669"
+                    bgColor="rgba(5, 150, 105, 0.9)"
+                />{" "}
+                , each number is the sum of the two before it: 1, 1, 2, 3, 5, 8, 13, 21...
             </InteractiveParagraph>
 
             <InteractiveParagraph className="text-muted-foreground">
-                <EditableText as="span">
-                    Pi (π) is perhaps the most famous number in mathematics. This non-repeating decimal connects a circle's circumference to its diameter. If a circle has a diameter of 1 unit, its circumference is π ≈ 3.14159 units. Ancient civilizations approximated pi thousands of years ago, and mathematicians continue to calculate more digits today — currently over 100 trillion!
-                </EditableText>
+                Pi (π) is perhaps the most famous number in mathematics. This non-repeating decimal connects a circle's circumference to its diameter. If a circle has a diameter of{" "}
+                <InlineStepper
+                    initialValue={1}
+                    min={1}
+                    max={10}
+                    color="#0EA5E9"
+                    bgColor="rgba(14, 165, 233, 0.9)"
+                />{" "}
+                unit, its circumference is{" "}
+                <InlineTextInput
+                    correctAnswer="π"
+                    placeholder="?"
+                    color="#F59E0B"
+                    bgColor="rgba(245, 158, 11, 0.35)"
+                />{" "}
+                ≈ 3.14159 units. Ancient civilizations approximated pi thousands of years ago, and mathematicians continue to calculate more digits today — currently over 100 trillion!
             </InteractiveParagraph>
         </Section>
     </FullWidthLayout>
